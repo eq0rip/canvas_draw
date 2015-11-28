@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			margin: 0;
+			padding:0;
+			color:#f0f0f0;
+		}
+	</style>
+</head>
+<body>
+	<div style="height:30px;width:100%;background-color:#e1e1e1;margin:0 auto;" id="log"></div>
+	<canvas height="1000" width="1000" style="border:2px solid red;" id="draw"></canvas>
+
+
+</body>
+
+<script>
+	var flag = 0;
+	
+var board = document.getElementById('draw');
+
+	board.addEventListener("mousedown", function(event){
+		flag = 1;
+
+
+	var context = board.getContext('2d');
+	var circleX;
+	var circleY;
+
+	var radius = 10;
+		circleX=event.clientX;
+		circleY=-20+event.clientY;
+		console.log(circleX);
+		console.log(circleY);
+
+		context.beginPath();
+		context.arc(circleX, circleY, radius, 0 , 360);
+		 context.fillStyle = "red";
+    context.fill();
+
+
+		
+	});
+	board.addEventListener("mousemove", function(event){
+
+	});
+	board.addEventListener("mouseup", function(){
+		flag=0;
+	});
+</script>
+</html>
