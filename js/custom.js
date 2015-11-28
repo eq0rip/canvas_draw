@@ -17,17 +17,7 @@ balls = new Array();
 	var red="#EF2B36";
 	var yellow = "#FFC636";
 	var green="#02A817";
- 
-	// G
-	// balls.push(new Ball(173,63,0,0,blue));
-	// balls.push(new Ball(158,53,0,0,blue));
-	// balls.push(new Ball(143,52,0,0,blue));
-	// balls.push(new Ball(130,53,0,0,blue));
-	// balls.push(new Ball(117,58,0,0,blue));
-	// balls.push(new Ball(110,70,0,0,blue));
-	// balls.push(new Ball(102,82,0,0,blue));
-	// balls.push(new Ball(104,96,0,0,blue)); 
-	////lslsls
+
 
 $(window).load(function(){
 	left_add=$('#left_control').width();
