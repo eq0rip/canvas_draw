@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	padding:0;
+	
+	background-color: #E1E3E4;
+
+}
+h1 {
+	font-family: 'Alegreya';
+	font-weight: bold;
+	font-size: 1.4em;
+}
+#log {
+	height:60px;
+	width:100%;
+	background-color:#F4F4F4;
+	margin:0 auto;
+}
+#left_control {
+	width:20%;
+	height:1000px;
+	float: left;
+}
+#board_wrapper {
+	width:60%;
+	float: left;
+
+}
+#right_control {
+	width: auto;
+	float:left;
+	
+}
