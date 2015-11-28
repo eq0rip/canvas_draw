@@ -3,6 +3,7 @@ body {
 	padding:0;
 	
 	background-color: #E1E3E4;
+	cusror:;
 
 }
 h1 {
@@ -30,4 +31,17 @@ h1 {
 	width: auto;
 	float:left;
 	
+}
+#cursor {
+	position:absolute;
+	top:0;
+	display: none;
+	left:0;
+	background-color: red;
+	border-radius: 4px;
+	width:20px;
+	height:20px;
+}
+#draw {
+	cursor: none;
 }

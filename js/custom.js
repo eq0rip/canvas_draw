@@ -31,7 +31,16 @@ $('#draw').mousedown(function (event){
 
 
 });
+$('#draw').mouseenter(function(event){
+	$('#cursor').show();
+	$('#cursor').css({'top':event.clientY,'left':event.clientX});
+});
+$('#draw').mouseout(function(){
+	$('#cursor').hide();
+});
 $('#draw').mousemove(function (event){
+
+	$('#cursor').css({'top':event.clientY,'left':event.clientX});
 	if(flag==1){
 
 		
