@@ -19,17 +19,25 @@
 <script>
 	var flag = 0;
 	
-var board = document.getElementById('draw');
-
-	board.addEventListener("mousedown", function(event){
-		flag = 1;
-
-
+	var board = document.getElementById('draw');
 	var context = board.getContext('2d');
 	var circleX;
 	var circleY;
 
 	var radius = 10;
+
+	board.addEventListener("mousedown", function(event){
+		flag = 1;
+
+
+
+
+		
+	});
+	board.addEventListener("mousemove", function(event){
+		if(flag==1){
+			
+		
 		circleX=event.clientX;
 		circleY=-20+event.clientY;
 		console.log(circleX);
@@ -37,13 +45,9 @@ var board = document.getElementById('draw');
 
 		context.beginPath();
 		context.arc(circleX, circleY, radius, 0 , 360);
-		 context.fillStyle = "red";
-    context.fill();
-
-
-		
-	});
-	board.addEventListener("mousemove", function(event){
+		context.fillStyle = "red";
+		context.fill();
+		}
 
 	});
 	board.addEventListener("mouseup", function(){
