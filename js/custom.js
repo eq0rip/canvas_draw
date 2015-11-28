@@ -1,12 +1,34 @@
 var flag = 0;
 var logg=$('#log').text();
 var board = document.getElementById('draw');
-var context = board.getContext('2d');
+var draw_context = board.getContext('2d');
 var circleX;
 var circleY;
 
-var radius = 10;
+var radiuss = 10;
 var left_add;
+
+// bacll
+var canvas=document.getElementById("myCanvas");
+var	context=canvas.getContext("2d");
+balls = new Array();
+ 
+	var blue = "#3A5BCD";
+	var red="#EF2B36";
+	var yellow = "#FFC636";
+	var green="#02A817";
+ 
+	// G
+	// balls.push(new Ball(173,63,0,0,blue));
+	// balls.push(new Ball(158,53,0,0,blue));
+	// balls.push(new Ball(143,52,0,0,blue));
+	// balls.push(new Ball(130,53,0,0,blue));
+	// balls.push(new Ball(117,58,0,0,blue));
+	// balls.push(new Ball(110,70,0,0,blue));
+	// balls.push(new Ball(102,82,0,0,blue));
+	// balls.push(new Ball(104,96,0,0,blue)); 
+	////lslsls
+
 $(window).load(function(){
 	left_add=$('#left_control').width();
 });
@@ -23,17 +45,22 @@ $('#draw').mousedown(function (event){
 	console.log(circleX);
 	console.log(circleY);
 	var	color=$('.sp-preview-inner').css("background-color"); 
-	context.beginPath();
-	context.arc(circleX, circleY, radius, 0 , 360);
-	context.fillStyle = color;
-	context.fill();
+		balls.push(new Ball(circleX,circleY,0,0,color));
+
+	draw_context.beginPath();
+	draw_context.arc(circleX, circleY, radiuss, 0 , 360);
+	draw_context.fillStyle = color;
+	draw_context.fill();
+
 
 
 
 });
 $('#draw').mouseenter(function(event){
 	$('#cursor').show();
-	$('#cursor').css({'top':event.clientY,'left':event.clientX});
+	var	color=$('.sp-preview-inner').css("background-color"); 
+
+	$('#cursor').css({'top':event.clientY,'left':event.clientX,'background-color':color});
 });
 $('#draw').mouseout(function(){
 	$('#cursor').hide();
@@ -49,10 +76,11 @@ $('#draw').mousemove(function (event){
 		console.log(circleX);
 		console.log(circleY);
 		var color=$('.sp-preview-inner').css("background-color"); 
-		context.beginPath();
-		context.arc(circleX, circleY, radius, 0 , 360);
-		context.fillStyle = color;
-		context.fill();
+		balls.push(new Ball(circleX,circleY,0,0,color));
+		draw_context.beginPath();
+		draw_context.arc(circleX, circleY, radiuss, 0 , 360);
+		draw_context.fillStyle = color;
+		draw_context.fill();
 
 	}
 
