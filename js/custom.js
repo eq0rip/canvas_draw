@@ -38,7 +38,7 @@ $('#draw').mousedown(function (event){
 	var	color=$('.sp-preview-inner').css("background-color"); 
 		balls.push(new Ball(circleX,circleY,0,0,color));
 		
-		generated_ball_data='[['+circleX+','+circleY+',0,0,'+color+']],';
+		generated_ball_data='[['+circleX+','+circleY+','+radiuss+',0,0,'+color+']],';
 		
 		$('#ball_data').append('<br/>'+generated_ball_data);
 
