@@ -32,6 +32,7 @@ h1 {
 #board_wrapper {
 	width:60%;
 	float: left;
+	position: relative;
 
 }
 #right_control {
@@ -55,9 +56,25 @@ h1 {
 }
 #draw {
 	cursor: none;
+	background-color: rgba(0,0,0,0.2);
+
+
+}
+#board_wrapper::after {
+    content: "<=Draw here ";
+    position: absolute;
+    top: 40px;
+    right: 15%;
+    color: #fff;
+    font-family: 'Alegreya';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#myCanvas {
+	background-color: rgba(0,0,0,0.2);
 }
 #ball_data {
-overflow-y:hidden;
+
 	height:500px;
 	font-size: 0.9em;
 	line-height: 2em;
