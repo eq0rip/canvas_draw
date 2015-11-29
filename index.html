@@ -16,15 +16,19 @@
 <body>
 
 	<div id="cursor"></div>
-	<div style="" id="log"></div>
+	<div style="" id="log">Choose Color, Choose ball radius and draw anything.Click "Generate".Have Fun!!!</div>
 	<div id="left_control">
 		Left Control
+		ball data:(x,y,R,vx,vy,color)
+		<div id="ball_data">
+			
+		</div>
 	</div>
 	<div id="board_wrapper">
 		<canvas height="300" width="800" style="border:2px solid red;" id="draw"></canvas>
 	</div>
 	<div id="right_control">
-		Ball Radius :
+		Ball Radius :<span id="ball_radius_log"></span>
 			<input id="control_radius" type="text" data-slider="true" data-slider-range="1,20" data-slider-step="1" data-slider-snap="true">
 
 		Color:
@@ -32,14 +36,12 @@
 		<br/>
 		<button onclick="init()">Generate</button>
 		<br/>
-		ball data:(x,y,R,vx,vy,color)
-		<div id="ball_data">
-			
-		</div>
+	
 
 	</div>
 	<canvas id="myCanvas" width="800" height="300" onmousemove="handleMouseMove(event)" onmouseout="handleMouseOut()" style="border:2px solid blue;"></canvas>
-
+	<br/>
+	
 
 
 </body>

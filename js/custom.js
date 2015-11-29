@@ -21,6 +21,11 @@ balls = new Array();
 
 $(window).load(function(){
 	left_add=$('#left_control').width();
+	  $('#ball_radius_log').text(radiuss);
+	  	  $('#control_radius').val(radiuss);
+
+
+
 
 });
 $(window).resize(function(){
@@ -99,6 +104,9 @@ $("#control_radius").bind("slider:changed", function (event, data) {
   // The currently selected value of the slider
   radiuss=$('#control_radius').val();
   ballRadius=radiuss;
+  $('#ball_radius_log').text(ballRadius);
+  $('#cursor').width(2*radiuss);
+  $('#cursor').height(2*radiuss);
   //alert radiuss;
   
 
