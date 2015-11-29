@@ -17,7 +17,7 @@ balls = new Array();
 	var red="#EF2B36";
 	var yellow = "#FFC636";
 	var green="#02A817";
-
+	var generated_ball_data;
 
 $(window).load(function(){
 	left_add=$('#left_control').width();
@@ -37,6 +37,10 @@ $('#draw').mousedown(function (event){
 	console.log(circleY);
 	var	color=$('.sp-preview-inner').css("background-color"); 
 		balls.push(new Ball(circleX,circleY,0,0,color));
+		
+		generated_ball_data='[['+circleX+','+circleY+',0,0,'+color+']],';
+		
+		$('#ball_data').append('<br/>'+generated_ball_data);
 
 	draw_context.beginPath();
 	draw_context.arc(circleX, circleY, radiuss, 0 , 360);

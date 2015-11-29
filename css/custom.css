@@ -45,3 +45,10 @@ h1 {
 #draw {
 	cursor: none;
 }
+#ball_data {
+	overflow: scroll;
+	height:100px;
+	font-size: 10px;
+	line-height: 10px;
+
+}
