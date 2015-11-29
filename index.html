@@ -3,7 +3,12 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+
+		<link href="css/simple-slider.css" rel="stylesheet" type="text/css" />
+
 	<link href="css/spectrum.css" rel="stylesheet">
+
+
 	<link href="css/custom.css" rel="stylesheet">
 
 
@@ -16,18 +21,19 @@
 		Left Control
 	</div>
 	<div id="board_wrapper">
-		<canvas height="200" width="578" style="border:2px solid red;" id="draw"></canvas>
+		<canvas height="300" width="800" style="border:2px solid red;" id="draw"></canvas>
 	</div>
 	<div id="right_control">
+		Ball Radius :
+			<input id="control_radius" type="text" data-slider="true" data-slider-range="1,20" data-slider-step="1" data-slider-snap="true">
+
 		Color:
 		<input type='text' id="select_color" />
 		<br/>
 		<button onclick="init()">Generate</button>
 
 	</div>
-	<canvas id="myCanvas" width="578" height="200" onmousemove="handleMouseMove(event)" onmouseout="handleMouseOut()"
-
-	></canvas>
+	<canvas id="myCanvas" width="800" height="300" onmousemove="handleMouseMove(event)" onmouseout="handleMouseOut()" style="border:2px solid blue;"></canvas>
 
 
 
@@ -35,6 +41,8 @@
 
 
 <script src="js/spectrum.js"></script>
+	<script src="js/simple-slider.js"></script>
+
 <script src="js/move_balls.js" type="text/javascript"></script>
 
 <script src="js/custom.js" type="text/javascript"></script>

@@ -133,7 +133,7 @@ function updateStageObjects() {
  
 		// ceiling condition
 		if (balls[n].y < (ballRadius)) {
-			balls[n].y=ballRadius+2;
+			balls[n].y=ballRadius*2;
 			balls[n].vy*=-1; 
 			balls[n].vy*=(1-collisionDamper);
 		}
@@ -147,7 +147,7 @@ function updateStageObjects() {
  
 		// left wall condition
 		if (balls[n].x < (ballRadius)) {
-			balls[n].x=ballRadius+2;
+			balls[n].x=ballRadius*2;
 			balls[n].vx*=-1;
 			balls[n].vx*=(1-collisionDamper);
 		}	

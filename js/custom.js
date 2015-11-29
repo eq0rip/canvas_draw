@@ -21,6 +21,7 @@ balls = new Array();
 
 $(window).load(function(){
 	left_add=$('#left_control').width();
+
 });
 $(window).resize(function(){
 	left_add=$('#left_control').width();
@@ -82,4 +83,18 @@ $('#draw').mouseup(function(){
 
 $("#select_color").spectrum({
 	color: "#f00"
+});
+
+
+
+////radius value slider change
+$("#control_radius").bind("slider:changed", function (event, data) {
+  // The currently selected value of the slider
+  radiuss=$('#control_radius').val();
+  ballRadius=radiuss;
+  //alert radiuss;
+  
+
+  // The value as a ratio of the slider (between 0 and 1)
+ // alert(data.ratio);
 });
